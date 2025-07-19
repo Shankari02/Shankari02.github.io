@@ -1,0 +1,23 @@
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #f9f9f9;
+}
+.site-footer small {
+  display: inline-block;
+}
+.site-footer small a {
+  margin: 0 1rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.site-footer small a img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.site-footer small a:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
