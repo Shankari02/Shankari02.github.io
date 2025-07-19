@@ -1,11 +1,12 @@
 ---
 layout: base.njk
-section: contact
+section: page
 ---
 <div class="page-container">
   <h1>{{ title }}</h1>
+  {% if subtitle %}
+    <p>{{ subtitle }}</p>
+  {% endif %}
   <hr/>
   {{ layoutContent | safe }}
-
-  {% include "partials/form.njk" %}
 </div>
