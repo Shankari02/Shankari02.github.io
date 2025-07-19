@@ -50,7 +50,8 @@ module.exports = function (eleventyConfig) {
     passthroughFileCopy: true,
     dir: {
       input: 'src',
-      layouts: "_layouts"
+      layouts: "_layouts",
+      includes: "_includes"
     },
   };
 };
