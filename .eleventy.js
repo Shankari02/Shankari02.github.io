@@ -9,14 +9,6 @@ const browserSyncConfig = require('./src/_11ty/utils/browser-sync-config');
 const { readableDateFilter, machineDateFilter } = require('./src/_11ty/filters/date-filters');
 
 module.exports = function (eleventyConfig) {
-
-    // Input directory: src
-  // Output directory: _site
-  eleventyConfig.addPassthroughCopy("src/style.css")
-  eleventyConfig.addPassthroughCopy("src/images/")
-  eleventyConfig.setDataDeepMerge(true);
-  eleventyConfig.setTemplateFormats("html,njk");
-
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -58,7 +50,7 @@ module.exports = function (eleventyConfig) {
     passthroughFileCopy: true,
     dir: {
       input: 'src',
-      layouts: '_layouts',
+      layouts: "_layouts"
     },
   };
 };
