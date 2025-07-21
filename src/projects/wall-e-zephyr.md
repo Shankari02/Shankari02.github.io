@@ -2,7 +2,7 @@
 title: Wall-E on Zephyr
 emoji: 🚜
 date: 2024-12-31
-summary: This is an NPM package I made
+summary: Exploring Zephyr RTOS
 tags:
   - Zephyr RTOS
   - Devicetree overlays
