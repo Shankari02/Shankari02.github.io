@@ -10,7 +10,7 @@ permalink: "blog/ospp/pre-selection/index.html"
 
 When I started looking out for projects, I knew one thing for sure - I didn’t want to go with something familiar. I had already spent a good amount of time working with FreeRTOS and Zephyr RTOS in projects. While both were great learning experiences, I was itching to try something new.
 
-I came upon Embox RTOS, had a look at its projects and found - [Adding standard device tree support to Embox RTOS](https://summer-ospp.ac.cn/org/prodetail/259c00210?lang=en&list=pro). I had already worked with devicetree overlays of Zephyr RTOS so thought this could be interesting. Had a closer look at what was to be done and approached my go-to senior☺️, [Zain](https://www.linkedin.com/in/zain-siddavatam/), for a review on the project and finalized this one.
+I came upon Embox RTOS, had a look at its projects and found - [Adding standard device tree support to Embox RTOS](https://summer-ospp.ac.cn/org/prodetail/259c00210?lang=en&list=pro). I had already worked with devicetree overlays of Zephyr RTOS so thought this could be interesting. Had a closer look at what was to be done and approached my go-to senior☺️ [Zain](https://www.linkedin.com/in/zain-siddavatam/), for a review on the project and finalized this one.
 
 ## Diving deep into Embox RTOS
 

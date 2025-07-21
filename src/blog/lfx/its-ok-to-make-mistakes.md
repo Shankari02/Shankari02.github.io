@@ -18,12 +18,11 @@ So I had sent in this patch to fix `strncpy()` in the `nconf` tool ([Commit link
 
 Until a few days later, I saw this in my inbox:
 
-[**[BUG linux-next] nconfig: uncleared lines of text on help screens**]  
-(https://lore.kernel.org/lkml/CAK7LNAT54nvwYmTy20Ep8U2kr4thn68yYWXi9R-d3Yx3iXs=Bg@mail.gmail.com/T/#)
+[**[BUG linux-next] nconfig: uncleared lines of text on help screens**](https://lore.kernel.org/lkml/CAK7LNAT54nvwYmTy20Ep8U2kr4thn68yYWXi9R-d3Yx3iXs=Bg@mail.gmail.com/T/#)
 
 At first glance, I panicked a bit. A *bug report* on a patch I had sent in. Not ideal. But after taking a step back, I carefully went through the report and realized the issue was most likely from this line I had changed:
 
-```
+```c
 - tmp[len] = '\0';
 + tmp[sizeof(tmp) - 1] = '\0';
 ```

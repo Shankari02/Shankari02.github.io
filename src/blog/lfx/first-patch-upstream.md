@@ -33,13 +33,13 @@ Here’s a link to the issue I worked on:
 
 Initially, the documentation simply said:
 
-```
+```c
 /// # Invariants
 ///
 /// `inner` is a registered misc device.
 ```
 This felt vague. The improved version broke the invariant down more explicitly:
-```
+```c
 /// # Invariants
 ///
 /// - `inner` contains a `struct miscdevice` that is registered using

@@ -39,7 +39,7 @@ That said, **Devicetree overlays** were… a journey 😅
 
 Here's an example overlay I wrote to enable `pwm0`:
 
-```
+```c
 &pwm0 {
     status = "okay";
 };
@@ -60,7 +60,7 @@ And I could get motors running -
 
 And for ADC:
 
-```
+```c
 &adc {
     status = "okay";
     channel@0 {
@@ -74,7 +74,7 @@ And for ADC:
 ```
 We also got to enable drivers in prj.conf:
 
-```
+```c
 CONFIG_PWM=y
 CONFIG_ADC=y
 CONFIG_UART_CONSOLE=y

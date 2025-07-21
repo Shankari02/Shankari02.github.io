@@ -39,7 +39,7 @@ Here’s what the final patch did:
 This ensures that no matter what the input is, the buffer remains null-terminated and safe to use.
 
 Here’s a snippet from one of the affected locations in nconf.c:
-```
+```c
 strncpy(k_menu_items[index].str, tmp_str, sizeof(k_menu_items[index].str));
 + k_menu_items[index].str[sizeof(k_menu_items[index].str) - 1] = '\0';
 ```

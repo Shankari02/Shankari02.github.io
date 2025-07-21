@@ -25,7 +25,7 @@ I first enabled **two OTA partitions** using `idf.py menuconfig`:
 
 Then I created a custom partition CSV:
 
-```
+```c
 Name, Type, SubType, Offset, Size, Flags
 Note: if you have increased the bootloader size, make sure to update the offsets to  avoid overlap
 nvs, data, nvs, 0xb000, 0x4000
@@ -46,7 +46,7 @@ I had to carefully adjust the sizes based on the size of the firmware binary I p
 I used the ESP-IDF HTTP server to build a basic file upload endpoint that receives a `.bin` file and writes it to an OTA partition.
 
 Here’s the main logic of the upload handler:
-```
+```c
 esp_err_t upload_post_handler(httpd_req_t *req) {
 esp_ota_handle_t update_handle = 0 ;
 const esp_partition_t *update_partition = esp_ota_get_next_update_partition(NULL);
@@ -94,8 +94,9 @@ W (42129) httpd_uri: httpd_uri: uri handler execution failed
 It took me quite a while to figure out, but eventually I found the cause was **buffer alignment**. The flash API expects the input buffer to be 8-byte aligned.
 
 Fix:
-`char buf[1000] attribute((aligned(8)));`
-
+```c
+char buf[1000] attribute((aligned(8)));
+```
 Adding `__attribute__((aligned(8)))` to the buffer fixed the problem completely. From then on, uploads worked correctly.
 
 ---
@@ -103,7 +104,7 @@ Adding `__attribute__((aligned(8)))` to the buffer fixed the problem completely.
 #### Configuring SoftAP
 
 As I said above, the ESP32 was configured to operate as a Wi-Fi Access Point (AP), so I could connect my laptop directly and open a local web page to upload the binary:
-```
+```c
 wifi_config_t wifi_config = {
 .ap = {
 .ssid = "esp32-ota",
