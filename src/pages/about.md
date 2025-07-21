@@ -24,7 +24,7 @@ Over the past few years, I’ve worked on:
 
 ### Why I Started This Blog
 
-I started this blog to share what I’ve learned — and what I’m still learning. Its kind of my digital lab notebook — a place where I share the things I build, fix, break (and fix again). Whether it's a deep dive into the Linux kernel or a weekend project with an ESP32, I document the how and why behind the process.
+I started this blog to share what I’ve learned, and what I’m still learning. Its kind of my digital lab notebook - a place where I share the things I build, fix, break (and fix again). Whether it's a deep dive into the Linux kernel or a weekend project with an ESP32, I document the how and why behind the process.
 
 ### Let’s Connect
 
