@@ -41,7 +41,7 @@ As per the Linux kernel process, it’s good practice to wait two weeks before f
 
 ---
 
-#### What I Learned
+#### What I Learnt
 - Even careful patches can go wrong.
 - Linux kernel is a community. Whether you're new or experienced, you're welcomed, encouraged, and mentored.
 - Mistakes are part of learning. What matters is how quickly and responsibly you respond.
