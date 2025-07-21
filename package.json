@@ -4,7 +4,7 @@
   "description": "The super simple portfolio template built with Eleventy and Netlify CMS",
   "scripts": {
     "start": "cross-env npm-run-all build:sass --parallel watch:*",
-    "build": "cross-env npm-run-all build:sass build:scripts build:eleventy",
+    "build": "eleventy",
     "watch:scripts": "esbuild \"./src/assets/js/main.js\" --target=es6 --bundle --outfile=\"./_site/assets/js/main.bundle.js\"",
     "build:scripts": "esbuild \"./src/assets/js/main.js\" --target=es6 --bundle --minify --outfile=\"./_site/assets/js/main.bundle.js\"",
     "watch:sass": "sass --no-source-map --watch src/assets/scss:_site/assets/css/",
@@ -17,18 +17,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shankari02/my_portfolio"
+    "url": "https://github.com/Shankari02/Shankari02.github.io"
   },
   "author": {
     "name": "Shankari",
     "email": "shankari.anand618@gmail.com",
-    "url": "https://Shankari02/github.io"
+    "url": "https://shankari02.github.io/"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shankari02/my_portfolio"
+    "url": "https://shankari02.github.io/"
   },
-  "homepage": "https://github.com/Shankari02/my_portfolio",
+  "homepage": "https://shankari02.github.io/",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^6.0.4",

@@ -1,6 +1,7 @@
 ---
 layout: base.njk
-section: home
+permalink: /index.html
+title: Home
 ---
 <div class="home-page">
 	<div class="home-page__bg-square"></div>
@@ -23,8 +24,8 @@ section: home
       %}
     </div>
   </div>
-  
-  {# Blogs #}
+
+  {# Blogs (moved above projects) #}
   <div class="list-header">
     <h2 class="list-header__title">Blogs</h2>
     <a class="btn btn--outline btn--sm" href="/blog">View All</a>
@@ -35,7 +36,6 @@ section: home
     show_tags = false,
     limit = 3
   ) }}
-</div>
 
   {# Projects #}
   <div class="list-header">
@@ -44,5 +44,4 @@ section: home
   </div>
   {% from "macros/projectlist.njk" import projectlist %}
   {{ projectlist(projects = collections.project | reverse) }}
-
-
+</div>
