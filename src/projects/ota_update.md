@@ -122,11 +122,13 @@ Once connected, I opened the ESP32's local IP address and uploaded a binary thro
 #### Final Results
 
 - Successfully uploaded and flashed new firmware over Wi-Fi. Flashed LED Blink code using OTA update. 
-  <video width="640" height="360" controls>
-    <source src="/assets/img/blog_images/ota_project/ota-flashing.mp4" type="video/mp4"> Video
+  <div style="text-align: center;">
+  <video width="300" height="200" controls>
+    <source src="/assets/img/blog_images/ota_project/ota-flashing.mp4" type="video/mp4">
   </video>
+  </div>
   
-  The PCB you can see is actually known as the SRA board developed by the members of [SRA-VJTI](https://sravjti.in/). You can have a look [here](https://github.com/SRA-VJTI/sra-board-hardware-design) for more information on the PCB.
+- The PCB you can see is actually known as the SRA board developed by the members of [SRA-VJTI](https://sravjti.in/). You can have a look [here](https://github.com/SRA-VJTI/sra-board-hardware-design) for more information on the PCB.
 
 - [Github repository](https://github.com/Shankari02/OTA-update-on-ESP32)
 
