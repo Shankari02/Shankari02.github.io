@@ -11,7 +11,7 @@ permalink: /blog/index.html
   {# Article List #}
   {% from "macros/articlelist.njk" import articlelist %}
   {{ articlelist(
-    articles = pagination.items | reverse,
+    articles = pagination.items,
     show_tags = true
   ) }}
 

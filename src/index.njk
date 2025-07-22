@@ -32,7 +32,7 @@ title: Shankari's Portfolio
   </div>
   {% from "macros/articlelist.njk" import articlelist %}
   {{ articlelist(
-    articles = collections.post | reverse,
+    articles = collections.post,
     show_tags = false,
     limit = 3
   ) }}

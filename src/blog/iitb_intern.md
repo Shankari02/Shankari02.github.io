@@ -6,12 +6,12 @@ layout: post.njk
 permalink: "blog/intern/index.html"
 ---
 
-## I Tried Sending Music Over RF... and It Was Pure Chaos (at First)
+### I Tried Sending Music Over RF... and It Was Pure Chaos (at First)
 This internship project turned out to be way more than I expected. When I started, the goal sounded simple: take a music file, transmit it using an FPGA and SDR setup, and receive it wirelessly. Easy, right?
 
 *Nope. Not even close.*
 
-### The Plan (in My Head)
+#### The Plan (in My Head)
 The idea was:
 1. Use GNU Radio to take a .wav audio file.
 2. Convert it to I/Q samples (interleaved).
@@ -52,7 +52,7 @@ Spoiler: it was all of the above.
 
 It turned out that when I sent a single tone - say, a 1 kHz sine wave, everything worked fine. I could hear it on the output after demodulation. But real music (which is a mix of thousands of frequencies) completely broke the system.
 
-### The Real Troubleshooting
+#### The Real Troubleshooting
 So I began debugging everything:
 
 UART bitrate: I set it to 88200 baud to match my 44.1 kHz audio, since each sample had 2 bytes (I and Q interleaved).
@@ -66,7 +66,7 @@ Resampling: The most annoying part. I had to match the GNU Radio and FPGA timing
 A Few Wins
 There were moments where things just clicked. Hearing that first tone come back kind of audible felt great. 
 
-## Final Thoughts
+#### Final Thoughts
 I started off thinking this was going to be a small summer project. It ended up being a full deep dive into DSP, SDRs, FPGAs, UART bottlenecks and just general signal chaos. There’s still a long way to go - cleaner audio, real-time streaming, stereo support maybe - but I’m happy of what I managed to get working.
 
 I owe a deep gratitude to Prof. Siddharth Tallur who gave me an opportunity to work on this project which helped me gain fruitful knowledge in digital signal processing and Verilog HDL. 

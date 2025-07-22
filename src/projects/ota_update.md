@@ -85,7 +85,7 @@ return ESP_OK;
 #### Testing and the Major Bug
 
 While flashing, an ip used to be hosted by the esp32 and another one as soon as the laptop is connected to the wifi hosted by the esp32. Yes, I used the SoftAP here i.e. the esp32 becomes an access point and nodes can connect to it. Once the ip's were allotted and the binary file was uploaded on the server, I ran into this cryptic error:
-```
+```c
 E (42129) esp_ota_ops: OTA image has invalid magic byte (expected 0xE9, saw 0x48)
 W (42129) httpd_txrx: httpd_resp_send_err: 500 Internal Server Error - Flash Error
 W (42129) httpd_uri: httpd_uri: uri handler execution failed
