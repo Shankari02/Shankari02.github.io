@@ -1,7 +1,7 @@
 ---
 title: My First Patch Upstreamed to the Linux Kernel (Rust Subsystem)
 date: 2025-07-01
-tags: ["post", "lfx", "rust-for-linux"]
+tags: ["post", "lfx", "rust-for-linux", "miscdevice"]
 layout: post.njk
 permalink: "blog/lfx/first-patch-upstream/index.html"
 ---

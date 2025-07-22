@@ -69,6 +69,12 @@ Hopefully they’ll all be upstreamed soon!
 
 ---
 
+#### Update, as on 22nd July 2025
+
+The moving patch is applied to rust-next - [Commit 07dad44aa9a9](https://github.com/Rust-for-Linux/linux/commit/07dad44aa9a93b16af19e8609a10b241c352b440). Should show up in the [linux-next](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/) upstream soon!
+
+---
+
 The series:
 [1/7](https://lore.kernel.org/rust-for-linux/CANiq72k1ENBFw7eNc5Kb5cFagysqfsHt9a=Tr4NxuVcV2TD=nQ@mail.gmail.com/T/#mc3f4d39ca2d92ef4343fb60dd09450c3502d83c0), [2/7](https://lore.kernel.org/rust-for-linux/20250716090941.811418-1-shankari.ak0208@gmail.com/T/#u), [3/7](https://lore.kernel.org/rust-for-linux/20250716091158.812860-1-shankari.ak0208@gmail.com/T/#u), [4/7](https://lore.kernel.org/rust-for-linux/20250716091827.816971-1-shankari.ak0208@gmail.com/T/#u), [5/7](https://lore.kernel.org/rust-for-linux/20250717072724.14602-1-shankari.ak0208@gmail.com/T/#u), [6/7](https://lore.kernel.org/rust-for-linux/20250717073108.14943-1-shankari.ak0208@gmail.com/T/#u), [7/7](https://lore.kernel.org/rust-for-linux/20250717073450.15090-1-shankari.ak0208@gmail.com/T/#u)
 

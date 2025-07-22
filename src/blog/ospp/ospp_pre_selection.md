@@ -1,7 +1,7 @@
 ---
 title: A start to a new learning experience - OSPP 2025
 date: 2025-05-20
-tags: ["post", "ospp"]
+tags: ["post", "ospp", "device tree"]
 layout: post.njk
 permalink: "blog/ospp/pre-selection/index.html"
 ---

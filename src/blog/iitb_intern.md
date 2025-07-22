@@ -1,7 +1,7 @@
 ---
 title: My Internship Experience at IITB
 date: 2025-07-18
-tags: ["post", "internship"]
+tags: ["post", "internship", "verilog-hdl", "signal processing"]
 layout: post.njk
 permalink: "blog/intern/index.html"
 ---

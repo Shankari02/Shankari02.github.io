@@ -45,6 +45,30 @@ strncpy(k_menu_items[index].str, tmp_str, sizeof(k_menu_items[index].str));
 ```
 And similarly, in nconf.gui.c, places like `fill_window()` and `dialog_inputbox()` were fixed the same way.
 
+```c
+diff --git a/scripts/kconfig/nconf.gui.c b/scripts/kconfig/nconf.gui.c
+index 4bfdf8ac2a9a34..475a403ab8ba48 100644
+--- a/scripts/kconfig/nconf.gui.c
++++ b/scripts/kconfig/nconf.gui.c
+@@ -177,7 +177,7 @@ void fill_window(WINDOW *win, const char *text)
+ 		const char *line = get_line(text, i);
+ 		int len = get_line_length(line);
+ 		strncpy(tmp, line, min(len, x));
+-		tmp[len] = '\0';
++		tmp[sizeof(tmp) - 1] = '\0';
+ 		mvwprintw(win, i, 0, "%s", tmp);
+ 	}
+ }
+@@ -359,6 +359,7 @@ int dialog_inputbox(WINDOW *main_window,
+ 	x = (columns-win_cols)/2;
+ 
+ 	strncpy(result, init, *result_len);
++	result[*result_len - 1] = '\0';
+ 
+ 	/* create the windows */
+ 	win = newwin(win_lines, win_cols, y, x);
+```
+
 ---
 
 #### Commit and Review Timeline

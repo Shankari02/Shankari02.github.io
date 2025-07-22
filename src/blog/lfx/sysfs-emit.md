@@ -28,6 +28,26 @@ There were a lot of places to update in the same file (`orangefs-sysfs.c`). I ve
 A small copy-paste mistake slipped through in one of the replacements and I didn’t run `xfstests` either (because I didn’t know I should!).
 
 ---
+Example change in the Patch:
+```c
+
+diff --git a/fs/orangefs/orangefs-sysfs.c b/fs/orangefs/orangefs-sysfs.c
+index 04e15dfa504aaf..369455b354efa0 100644
+--- a/fs/orangefs/orangefs-sysfs.c
++++ b/fs/orangefs/orangefs-sysfs.c
+@@ -217,36 +217,31 @@ static ssize_t sysfs_int_show(struct kobject *kobj,
+ 
+ 	if (!strcmp(kobj->name, ORANGEFS_KOBJ_ID)) {
+ 		if (!strcmp(attr->attr.name, "op_timeout_secs")) {
+-			rc = scnprintf(buf,
+-				       PAGE_SIZE,
++			rc = sysfs_emit(buf,
+ 				       "%d\n",
+ 				       op_timeout_secs);
+ 			goto out;
+```
+
+---
 
 #### The Fix (and the Lesson)
 Luckily, Mike (the maintainer) was super chill about it. He replied saying there's a small mistake but the patch itself is fine, and he even went ahead, fixed it, tested it with `xfstests`. Kindness in open source truly exists 😌.
