@@ -17,7 +17,7 @@ renderData:
 
   {% from "macros/articlelist.njk" import articlelist %}
   {{ articlelist(
-    articles = collections[tag] | reverse,
+    articles = collections[tag],
     show_tags = true
   ) }}
 
