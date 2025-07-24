@@ -1,5 +1,5 @@
 ---
-title: Long series of patches and still waiting...
+title: Long series of patches in rust...
 date: 2025-07-17
 tags: ["post", "lfx", "rust-for-linux", "sync"]
 layout: post.njk
